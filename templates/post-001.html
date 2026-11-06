@@ -1,0 +1,89 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>
+  :root{
+    --ink:#14181F; --ink2:#1E242E; --paper:#F4EEE4; --seal:#AC3E33; --seal-soft:#C9574B;
+    --muted:#9AA3AF; --line:rgba(244,238,228,.14); --gold:#C8A96A;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html,body{width:1080px;height:1350px}
+  body{background:var(--ink);color:var(--paper);font-family:"Inter",sans-serif;position:relative;overflow:hidden}
+  .bg{position:absolute;inset:0;
+    background:
+      radial-gradient(900px 600px at 110% -10%, rgba(172,62,51,.35), transparent 60%),
+      radial-gradient(700px 500px at -20% 110%, rgba(200,169,106,.12), transparent 60%),
+      linear-gradient(180deg,#151A22,#10141A);}
+  .grid{position:absolute;inset:0;opacity:.06;
+    background-image:linear-gradient(var(--paper) 1px,transparent 1px),linear-gradient(90deg,var(--paper) 1px,transparent 1px);
+    background-size:60px 60px}
+  .wrap{position:relative;padding:80px 84px 0;height:100%;display:flex;flex-direction:column}
+  .top{display:flex;justify-content:space-between;align-items:center}
+  .brand{display:flex;align-items:center;gap:16px}
+  .seal{width:54px;height:54px;border-radius:10px;background:var(--seal);display:grid;place-items:center;
+    font-family:"Noto Sans CJK HK";font-weight:900;font-size:30px;color:#fff;box-shadow:0 6px 20px rgba(172,62,51,.45)}
+  .brand b{font-weight:700;letter-spacing:.18em;font-size:22px}
+  .brand span{display:block;font-size:14px;letter-spacing:.3em;color:var(--muted);margin-top:4px}
+  .tag{font-size:16px;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);border:1px solid rgba(200,169,106,.45);padding:10px 18px;border-radius:40px}
+  .kicker{margin-top:84px;font-size:20px;letter-spacing:.28em;text-transform:uppercase;color:var(--seal-soft);font-weight:600}
+  h1{font-family:"Inter Display","Inter";font-weight:800;font-size:92px;line-height:.98;letter-spacing:-.025em;margin-top:22px}
+  h1 em{font-style:normal;color:var(--seal-soft)}
+  .sub{margin-top:26px;font-size:28px;line-height:1.4;color:#C9CED6;max-width:860px}
+  .cards{margin-top:54px;display:grid;grid-template-columns:1fr 1fr;gap:22px}
+  .card{background:rgba(255,255,255,.04);border:1px solid var(--line);border-radius:24px;padding:34px 32px}
+  .card.hk{border-top:4px solid var(--seal)}
+  .card.gz{border-top:4px solid var(--gold)}
+  .city{display:flex;align-items:baseline;justify-content:space-between}
+  .city h2{font-size:36px;font-weight:800;letter-spacing:-.01em}
+  .city small{font-family:"Noto Sans CJK HK";font-size:24px;color:var(--muted);font-weight:500}
+  .best{margin-top:8px;font-size:19px;color:var(--muted)}
+  ul{list-style:none;margin-top:24px}
+  li{display:flex;gap:14px;font-size:22px;line-height:1.35;padding:13px 0;border-top:1px solid var(--line)}
+  li i{flex:0 0 10px;height:10px;margin-top:10px;border-radius:50%}
+  .hk li i{background:var(--seal-soft)} .gz li i{background:var(--gold)}
+  li b{font-weight:700;color:#fff}
+  .tip{margin-top:30px;display:flex;gap:20px;align-items:center;background:var(--paper);color:var(--ink);border-radius:20px;padding:24px 30px}
+  .tip .lbl{font-size:15px;font-weight:800;letter-spacing:.22em;color:#fff;background:var(--seal);padding:9px 14px;border-radius:10px;white-space:nowrap}
+  .tip p{font-size:23px;line-height:1.38;font-weight:500}
+  .foot{margin-top:auto;display:flex;justify-content:space-between;align-items:center;padding:30px 0 40px;font-size:19px;color:var(--muted);letter-spacing:.06em}
+  .foot b{color:var(--paper);font-weight:600}
+</style></head>
+<body><div class="bg"></div><div class="grid"></div>
+<div class="wrap">
+  <div class="top">
+    <div class="brand"><div class="seal">链</div><div><b>LINKWIN</b><span>TRADING</span></div></div>
+    <div class="tag">Business Guide · 01</div>
+  </div>
+
+  <div class="kicker">Setting up in the Greater Bay Area</div>
+  <h1>Hong Kong <em>or</em><br>Guangzhou company?</h1>
+  <p class="sub">Many traders need both. Here’s what each one is really for.</p>
+
+  <div class="cards">
+    <div class="card hk">
+      <div class="city"><h2>Hong Kong</h2><small>香港</small></div>
+      <div class="best">Best for international trade</div>
+      <ul>
+        <li><i></i><span>Profits tax <b>8.25%</b> on the first HK$2M, <b>16.5%</b> above</span></li>
+        <li><i></i><span><b>No VAT</b> or sales tax on goods</span></li>
+        <li><i></i><span>Free movement of capital in <b>USD, HKD, RMB</b></span></li>
+        <li><i></i><span>Common-law contracts trusted by overseas buyers</span></li>
+      </ul>
+    </div>
+    <div class="card gz">
+      <div class="city"><h2>Guangzhou</h2><small>广州</small></div>
+      <div class="best">Best for selling inside China</div>
+      <ul>
+        <li><i></i><span>Issue official <b>fapiao</b> invoices to Chinese clients</span></li>
+        <li><i></i><span>Standard VAT <b>13%</b> on most goods</span></li>
+        <li><i></i><span>Corporate income tax <b>25%</b>, lower for small firms</span></li>
+        <li><i></i><span>Hire local staff and sign leases in your own name</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="tip"><span class="lbl">PRO TIP</span>
+    <p>Sell abroad through Hong Kong, buy and sell in China through Guangzhou. Keep the two sets of books separate.</p></div>
+
+  <div class="foot"><span><b>@linkwinco</b> · Save this for later</span><span>linkwinco.com</span></div>
+</div>
+</body></html>
