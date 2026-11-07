@@ -1,0 +1,53 @@
+<!doctype html><html lang="fa" dir="rtl"><head><meta charset="utf-8">
+<link rel="stylesheet" href="../brand/brand.css"><style>
+.wrap>*{flex-shrink:0}
+.board{margin-top:30px;background:rgba(255,255,255,.04);border:1px solid var(--line);border-radius:26px;overflow:hidden}
+.comp{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;padding:22px 30px;background:linear-gradient(150deg,rgba(172,62,51,.92),rgba(118,37,30,.92))}
+.comp .v{font-weight:800;font-size:74px;line-height:.95;letter-spacing:-.03em}
+.comp .l{font-size:19px;color:#F6D9D3;margin-top:8px;max-width:520px;line-height:1.35}
+.comp .c{flex:0 0 auto;font-weight:700;font-size:22px;background:var(--paper);color:var(--seal);padding:9px 14px;border-radius:12px}
+.unit{padding:16px 32px 4px;font-size:16px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+[dir=rtl] .unit{letter-spacing:0;font-size:18px}
+.lane{padding:13px 30px 14px;border-top:1px solid var(--line)}
+.unit + .lane{border-top:none}
+.row{display:flex;justify-content:space-between;align-items:baseline;gap:16px}
+.row .n{font-size:23px;font-weight:600}
+.row .r{display:flex;align-items:baseline;gap:16px}
+.row .r b{font-size:29px;font-weight:800;letter-spacing:-.01em}
+.row .r span{font-size:18px;font-weight:700;color:var(--gold);min-width:92px;text-align:end}
+.row .r span.flat{color:var(--muted)}
+.bar{margin-top:9px;height:7px;border-radius:8px;background:rgba(244,238,228,.08);overflow:hidden}
+.bar i{display:block;height:100%;border-radius:8px;background:linear-gradient(90deg,var(--gold),#E2C68F)}
+[dir=rtl] .bar i{margin-inline-start:0;background:linear-gradient(270deg,var(--gold),#E2C68F)}
+.chip{margin-top:20px;display:flex;gap:14px;align-items:flex-start;font-size:22px;line-height:1.45;color:#CDD2D9}
+.chip::before{content:"";flex:0 0 12px;height:12px;margin-top:11px;background:var(--seal2);transform:rotate(45deg)}
+.chip b{color:#fff}
+[dir=rtl] .chip{line-height:1.65}
+.tip{margin-top:20px}
+
+html:not(.story) .logo img{height:96px}
+html:not(.story) .kicker{margin-top:32px}
+html:not(.story) [dir=rtl] h1, html[dir=rtl]:not(.story) h1{font-size:68px}
+html:not(.story) .lane{padding:10px 30px 11px}
+html:not(.story) .comp{padding:18px 30px}
+html:not(.story) .comp .v{font-size:66px}
+html:not(.story) .board{margin-top:24px}
+html:not(.story) .chip{margin-top:16px;font-size:21px}
+html:not(.story) .tip{margin-top:16px;padding:18px 24px}
+html:not(.story) .tip p{font-size:21px}
+html:not(.story) .foot{padding:16px 0 30px}
+html.story .board{margin-top:56px} html.story .tip{margin-top:40px} html.story .kicker{margin-top:70px}
+</style></head>
+<body><div class="bg"></div><div class="wrap">
+<div class="top"><div class="logo"><img src="../brand/linkwin-logo-original-cropped.png"></div><div class="pill">FREIGHT WATCH</div></div>
+<div class="kicker">شاخص جهانی کانتینر دروری · ۱۴ آبان ۱۴۰۵</div>
+<h1>کرایه کانتینر<br>رو به <em>کاهش</em> است.</h1>
+<p class="sub">شاخص ترکیبی این هفته ۱٪ پایین آمد. وضعیت مسیرهای اصلی حمل از چین را ببینید.</p>
+<div class="board">
+ <div class="comp"><div><div class="v">۴٬۳۸۹ دلار</div><div class="l">شاخص ترکیبی جهانی · همه نرخ‌ها به دلار برای هر کانتینر ۴۰ فوتی</div></div><div class="c">۱٪ ▼ نسبت به هفته قبل</div></div>
+ <div class="lane"><div class="row"><span class="n">شانگهای ← نیویورک</span><span class="r"><b>۹٬۳۰۳ دلار</b><span class="">▼ ۳٪</span></span></div><div class="bar"><i style="width:100.0%"></i></div></div><div class="lane"><div class="row"><span class="n">شانگهای ← لس‌آنجلس</span><span class="r"><b>۷٬۵۳۹ دلار</b><span class="flat">بدون تغییر</span></span></div><div class="bar"><i style="width:81.0%"></i></div></div><div class="lane"><div class="row"><span class="n">شانگهای ← جنوا</span><span class="r"><b>۴٬۱۶۶ دلار</b><span class="flat">بدون تغییر</span></span></div><div class="bar"><i style="width:44.8%"></i></div></div><div class="lane"><div class="row"><span class="n">شانگهای ← روتردام</span><span class="r"><b>۳٬۶۱۵ دلار</b><span class="">▼ ۲٪</span></span></div><div class="bar"><i style="width:38.9%"></i></div></div>
+</div>
+<div class="chip"><span><b>کانال سوئز دوباره فعال شد.</b> اکنون ۶۰٪ ظرفیت مسیر آسیا–اروپا از این کانال عبور می‌کند.</span></div>
+<div class="tip"><span class="lbl">پیش از رزرو</span><p>از دو یا سه فورواردر قیمت بگیرید و ببینید کدام هزینه‌های جانبی در قیمت آمده است. خطوط کشتیرانی برای اواخر آبان افزایش نرخ مسیر آسیا–اروپا را دنبال می‌کنند.</p></div>
+<div class="foot"><div><b>تأمین کالا و حمل از چین با LinkWin</b><div class="src">منبع: Drewry، ۱۴ آبان ۱۴۰۵</div></div><span class="url">linkwinco.com</span></div>
+</div></body></html>
