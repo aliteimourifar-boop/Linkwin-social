@@ -1,0 +1,44 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<link rel="stylesheet" href="../brand/fonts.css">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1350px;overflow:hidden;font-family:'Manrope',sans-serif}
+.p{position:relative;height:450px;overflow:hidden;display:flex;align-items:center;padding:0 72px}
+.tag{position:absolute;left:72px;bottom:30px;font-size:17px;letter-spacing:.14em;text-transform:uppercase;font-weight:600}
+.tag b{font-weight:800}
+/* A — printed seal on warm paper: multiply makes the logo's white field vanish, pixels untouched */
+.a{background:radial-gradient(900px 500px at 80% 20%,#F7F2EA,#E9E1D3);color:#2A2520}
+.a .logo{width:250px;mix-blend-mode:multiply;filter:brightness(1.015)}
+.a h2{font-family:'Playfair Display';font-weight:900;font-size:64px;line-height:1.02;margin-left:60px;letter-spacing:-.01em}
+.a h2 i{font-style:normal;color:#9A3A2F}
+.a .tag{color:#7B7064}
+/* B — glass signature on a dark scene */
+.b{background:
+   linear-gradient(115deg,rgba(9,14,22,.2),rgba(9,14,22,.85) 70%),
+   repeating-linear-gradient(90deg,#24313F 0 120px,#1B2633 120px 128px,#2C3B4B 128px 250px,#162029 250px 256px),
+   #1A2430;color:#E8EDF2}
+.b .glass{position:absolute;top:0;right:72px;padding:34px 22px 22px;border-radius:0 0 14px 14px;
+   background:linear-gradient(180deg,#FFFFFF,#F3EEE6);
+   box-shadow:0 22px 60px rgba(0,0,0,.55),0 0 90px rgba(190,215,255,.22)}
+.b .glass::after{content:"";position:absolute;left:22px;right:22px;bottom:10px;height:2px;background:#AC3E33;opacity:.85}
+.b .glass img{display:block;height:104px;mix-blend-mode:multiply;filter:brightness(1.015)}
+.b h2{font-family:'Oswald';font-weight:600;font-size:86px;line-height:.98;text-transform:uppercase;letter-spacing:.01em;max-width:640px}
+.b h2 span{color:#9FC3E6}
+.b .tag{color:#9AA8B6}
+/* C — oversized transparent watermark + small signature on steel grey */
+.c{background:linear-gradient(160deg,#E4E8EC,#C9CFD6);color:#1D2833}
+.c .wm{position:absolute;right:-120px;top:-60px;width:640px;opacity:.09;mix-blend-mode:multiply;filter:brightness(1.015)}
+.c h2{font-family:'Cormorant Garamond';font-weight:700;font-size:78px;line-height:1;max-width:620px}
+.c .sig{position:absolute;right:72px;bottom:26px;display:flex;align-items:center;gap:16px;font-size:18px;letter-spacing:.08em;color:#3A4652}
+.c .sig img{height:76px;mix-blend-mode:multiply;filter:brightness(1.015)}
+.c .tag{color:#5E6A76}
+.rule{position:absolute;left:0;right:0;height:1px;background:rgba(0,0,0,.12)}
+</style></head><body>
+<section class="p a"><img class="logo" src="../brand/linkwin-logo-original-cropped.png"><h2>Printed<br>like a <i>seal.</i></h2>
+ <div class="tag"><b>A</b> · Multiply blend on light paper or bright photos</div></section>
+<section class="p b"><div class="glass"><img src="../brand/linkwin-logo-original-cropped.png"></div><h2>Seal <span>tab</span> on dark scenes</h2>
+ <div class="tag"><b>B</b> · Lit paper tab hanging from the top edge</div></section>
+<section class="p c"><img class="wm" src="../brand/linkwin-logo-original-cropped.png"><h2>Watermark &amp; signature</h2>
+ <div class="sig"><img src="../brand/linkwin-logo-original-cropped.png"><span>linkwinco.com</span></div>
+ <div class="tag"><b>C</b> · 9% watermark + small full-colour mark</div></section>
+</body></html>
