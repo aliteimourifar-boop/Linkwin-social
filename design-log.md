@@ -11,3 +11,4 @@ Format: date · concept name · background tone · palette · layout archetype �
 - 2026-11-08 · "Dark Ink" timeline (export controls) · dark · ink, seal red, gold · vertical timeline + tip bar · Inter / Vazirmatn · none · white box top-left
 
 The "Dark Ink" look above is retired (Ali, 8 Nov 2026). From 9 Nov 2026 every day must bring a new concept.
+- 2026-11-09 · "Element 24" (periodic-table poster) · light (warm paper) · paper #EEE9E0, graphite #1F2328, polished steel greys, seal red #AC3E33 on key number only · minimal poster: oversized element tile with ghost neighbours cropped by canvas, serif headline, one key number · Playfair Display + Manrope / Noto Naskh Arabic + IBM Plex Sans Arabic · none (material CSS chrome; photo sites blocked, library empty) · A printed seal, multiply, bottom corner (mirrored RTL)
