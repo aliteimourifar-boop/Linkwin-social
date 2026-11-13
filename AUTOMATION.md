@@ -5,8 +5,8 @@ mechanics.** If they disagree on mechanics (paths, tools, commands), this file w
 
 Account: Instagram @linkwinco · Windsor connector `instagram` · account id `17841478603045856`.
 Repo: `aliteimourifar-boop/Linkwin-social` (public; raw URLs are what Instagram fetches).
-Output per day: 4 feed posts (EN → FA → RU → AR), 1080×1350 JPEG, one topic adapted per language (not translated literally).
-Stories (1080×1920, `render.py ... story`) are optional extras per PLAYBOOK.md.
+Output per day: 4 feed posts (EN → FA → RU → AR), 1080×1350 JPEG, plus 4 Stories, 1080×1920 JPEG (9:16), one topic adapted per language (not translated literally).
+Stories are a required daily step: render a 9:16 recomposition per language (not a letterboxed feed), QC them, and publish with `create_story` immediately after the four feed posts.
 
 ## 0. Setup (once per box; skip if already done)
 ```bash
@@ -49,8 +49,13 @@ cd /workspace/Linkwin-social && gitw pull --ff-only
 2. Write `scripts/YYYY-MM-DD-<slug>.py` (creative brief + facts in the docstring, see `scripts/2026-11-13-apec-trucks.py`
    as the reference). It writes `templates/YYYY-MM-DD-<slug>-<lang>.html` and renders each one:
    ```bash
-   python3 tools/render.py templates/<file>.html posts/YYYY-MM-DD/<file>.jpg feed     # 1080x1350
+   python3 tools/render.py templates/<file>.html posts/YYYY-MM-DD/<file>.jpg feed           # 1080x1350
+   python3 tools/render.py templates/<file>.html posts/YYYY-MM-DD/<file>-story.jpg story    # 1080x1920
    ```
+   Day scripts should render both modes (see `scripts/2026-11-13-apec-trucks.py`: `python3 scripts/YYYY-MM-DD-<slug>.py` does feed + story; pass `story` or `feed` to do one).
+   `tools/render.py` adds `class="story"` to `<html>` in story mode; style `html.story` for a true 9:16 recomposition
+   (same photo, headline, graphic and seal signature, re-laid-out for vertical — not a letterboxed 4:5). Keep all text
+   and the logo out of the top 200 px and the bottom 250 px (content between y=200 and y=1670).
    `tools/render.py` waits for fonts and images, and reports (exit 2 unless `--no-strict`) any text element outside the
    canvas, horizontally clipped text, a web font that failed to load or a broken image.
    Fonts: `brand/fonts.css` (Playfair, Cormorant, Manrope, Oswald, IBM Plex Sans/Arabic, Space Grotesk, Noto Naskh/Kufi
@@ -83,34 +88,42 @@ Open every JPEG with the Read tool (also a 100 % crop of the RTL text) and tick:
 - [ ] Photo licence recorded in photos/CREDITS.md and credited.
 - [ ] Caption ≤2,200 chars, 4–6 hashtags ending #LinkWinTrading, linkwinco.com included.
 - [ ] JPEG, 1080×1350, < 8 MB.
+- [ ] Stories: JPEG, exactly 1080×1920, < 8 MB; text and logo clear of the top 200 px and bottom 250 px; same RTL / type / logo checks as the feed; 9:16 recomposition, not a letterboxed feed.
 
 ## 5. Push + verify URLs
 ```bash
-git add -A && git -c user.name="LinkWin Bot" -c user.email="noreply@linkwinco.com" commit -m "YYYY-MM-DD: <topic> (4 feed)"
+git add -A && git -c user.name="Mika (Grok Bot)" -c user.email="bot@linkwinco.com" commit -m "YYYY-MM-DD: <topic> (4 feed + 4 story)"
 gitw push origin main
-for l in en fa ru ar; do u="https://raw.githubusercontent.com/aliteimourifar-boop/Linkwin-social/main/posts/YYYY-MM-DD/YYYY-MM-DD-<slug>-$l.jpg"
-  curl -s -o /dev/null -w "$l %{http_code} %{content_type} %{size_download}\n" "$u"; done
+for kind in "" "-story"; do
+  for l in en fa ru ar; do u="https://raw.githubusercontent.com/aliteimourifar-boop/Linkwin-social/main/posts/YYYY-MM-DD/YYYY-MM-DD-<slug>-$l$kind.jpg"
+    curl -s -o /dev/null -w "$l$kind %{http_code} %{content_type} %{size_download}\n" "$u"; done
+done
 ```
-Every URL must return `200 image/jpeg`. raw.githubusercontent.com can lag ~1–5 min after a push (CDN); retry, do not publish
-until all four pass.
+Every URL (4 feed + 4 story) must return `200 image/jpeg`. raw.githubusercontent.com can lag ~1–5 min after a push (CDN); retry, do not publish
+until all eight pass.
 
 ## 6. Publish (only when Ali has approved the run or has switched on unattended publishing)
-Windsor MCP tool `execute_action`, one call per language, in order EN → FA → RU → AR:
+Windsor MCP tool `execute_action`, one call per language, in order EN → FA → RU → AR.
+First the four feed posts:
 ```json
 {"connector": "instagram", "account": "17841478603045856", "action": "create_image_post",
  "params": {"image_url": "<raw URL>", "caption": "<caption from posts.json>"}}
 ```
-- Check each response for the new media id. If a call errors (permissions, Windsor plan/trial, Instagram rejection of
-  the image), stop, do not retry in a loop, and report the exact error to Ali. A permissions error usually means reconnecting
+Then, immediately after the four feed posts succeed, the four Stories (`create_story` has no caption):
+```json
+{"connector": "instagram", "account": "17841478603045856", "action": "create_story",
+ "params": {"image_url": "<raw story URL>"}}
+```
+- Check each response for the new media id. Only count a post or Story as published if a media id is returned. If a call errors (permissions, Windsor plan/trial, Instagram rejection of
+  the image), stop, do not retry in a loop until you have checked whether it went live, and report the exact error to Ali. A permissions error usually means reconnecting
   Instagram in Windsor.
 - Windsor has no scheduling and no draft state: a successful call is live immediately.
 - Verify: Windsor `get_data`, connector `instagram`, accounts `["17841478603045856"]`, fields
-  `media_id, timestamp, media_product_type, media_permalink, media_caption`, `date_preset: last_7dT`; confirm 4 new FEED items.
-- Optional Stories: `create_story` with `{"image_url": ...}` (no caption).
+  `media_id, timestamp, media_product_type, media_permalink, media_caption`, `date_preset: last_7dT`; confirm 4 new FEED items (Stories expire in 24 h and may appear as STORY).
 
 ## 7. Log (so tomorrow does not repeat)
 Append one line to `posted-log.md`:
-`- YYYY-MM-DD · <topic with key facts> · <layout> · <sources with dates> · feed EN <id>, FA <id>, RU <id>, AR <id>`
+`- YYYY-MM-DD · <topic with key facts> · <layout> · <sources with dates> · feed EN <id>, FA <id>, RU <id>, AR <id> · stories EN <id>, FA <id>, RU <id>, AR <id>`
 and one line to `design-log.md` (format at its top; replace "DRAFT" with the media ids once published). Commit + push.
 
 ## 8. Weekly analytics (Mondays)
