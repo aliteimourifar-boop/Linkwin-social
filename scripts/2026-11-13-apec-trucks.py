@@ -12,6 +12,9 @@ Palette: night navy #0B1730, sodium amber #F3A93B (from the light trails), frost
 Composition: full-bleed photo; top scrim with kicker + headline (top-left LTR / top-right RTL); bottom frosted panel
   with the 5-day strip (columns mirror automatically for RTL) and footer. Not a still life (12 Nov), not a magazine
   cover/emblem (11 Nov), not an oversized numeral (10 Nov).
+Story (9:16, 1080×1920): same photo, headline, week strip and seal signature, recomposed for vertical — a centred
+  9:16 crop of the corridor (not a letterboxed 4:5), headline starts below the 200 px IG safe zone, frosted panel
+  sits in the lower third and ends above the 250 px bottom safe zone, with a tall mid-frame of open light trails.
 Type: IBM Plex Sans 600/400 (EN/RU) — first use as headline face; Vazirmatn 800/400 (FA, the face of linkwinco.com);
   IBM Plex Sans Arabic 600/400 (AR) stacked with IBM Plex Sans for Latin and digits.
 Imagery: photos/shenzhen-shennan-east-road-dusk.jpg — Dinkun Chen, Wikimedia Commons, CC BY-SA 4.0 (credited on image).
@@ -98,9 +101,17 @@ TUNE = {
   "fa": dict(hsize=70, hlh=1.45, hmax=900, lab=22, row=26),
   "ar": dict(hsize=74, hlh=1.4, hmax=900, lab=22, row=26),
 }
+# story: slightly larger type on the same 1080 width; content stays between y=200 and y=1670
+STORY_TUNE = {
+  "en": dict(hsize=82, hlh=1.06, hmax=900),
+  "ru": dict(hsize=74, hlh=1.08, hmax=920),
+  "fa": dict(hsize=72, hlh=1.45, hmax=920),
+  "ar": dict(hsize=76, hlh=1.40, hmax=920),
+}
 
 def html(lang):
     t, (hf, bf), k = T[lang], FONTS[lang], TUNE[lang]
+    sk = STORY_TUNE[lang]
     rtl = t["dir"] == "rtl"
     ls = "0" if rtl else ".14em"   # never letter-space Arabic script
     tt = "none" if rtl else "uppercase"
@@ -144,6 +155,20 @@ h1{{margin-top:30px;font:{'800' if lang=='fa' else '600'} {k['hsize']}px/{k['hlh
 .ft .url{{font:600 20px/1.4 'IBM Plex Sans',sans-serif;color:#F3A93B;letter-spacing:.02em}}
 .foot{{align-items:center}}
 __MARKCSS__
+html.story,html.story body{{width:1080px;height:1920px}}
+html.story .photo{{top:0;height:1920px}}
+html.story .scrim{{background:linear-gradient(180deg,rgba(8,16,34,.94) 0%,rgba(8,16,34,.72) 14%,rgba(8,16,34,.18) 24%,rgba(8,16,34,0) 34%,rgba(8,16,34,.08) 55%,rgba(8,16,34,.50) 70%,rgba(8,16,34,.82) 88%,rgba(8,16,34,.90) 100%)}}
+html.story .top{{top:236px;width:{sk['hmax']}px}}
+html.story h1{{margin-top:28px;font-size:{sk['hsize']}px;line-height:{sk['hlh']}}}
+html.story .panel{{bottom:268px;padding:36px 40px 30px;--lw-echo-size:460px}}
+html.story .lw-sig{{--lw-sig-h:70px}}
+html.story .dn{{font-size:42px}}
+html.story .days{{margin:22px 0 8px}}
+html.story .foot{{display:grid;grid-template-columns:1fr auto;grid-template-areas:"ident sig" "credits credits";align-items:center;column-gap:24px;row-gap:12px;margin-top:28px;padding-top:22px}}
+html.story .ft{{display:contents;max-width:none}}
+html.story .ident{{grid-area:ident}}
+html.story .credits{{grid-area:credits}}
+html.story .lw-sig{{grid-area:sig}}
 </style></head><body>
 <img class="photo" src="{PHOTO}" alt=""><div class="scrim"></div>
 <div class="top"><div class="kicker"><span>{t['kicker']}</span></div><h1>{t['h']}</h1></div>
@@ -151,14 +176,19 @@ __MARKCSS__
   <div class="ph"><span>{t['month']}</span></div>
   <div class="grid days">{days}</div>
   {rows}
-  <div class="foot"><div class="ft"><div class="hook">{t['hook']}</div><div class="url">linkwinco.com</div><div>{t['src']}</div><div>{t['photo']}</div></div>
+  <div class="foot"><div class="ft"><div class="ident"><div class="hook">{t['hook']}</div><div class="url">linkwinco.com</div></div><div class="credits"><div class="src">{t['src']}</div><div class="cred">{t['photo']}</div></div></div>
   {signature()}</div>
 </div></body></html>""".replace('__MARKCSS__', MARK_CSS)
 
 if __name__ == "__main__":
-    langs = sys.argv[1:] or ["en", "fa", "ru", "ar"]
+    args = [a for a in sys.argv[1:] if a]
+    modes = [a for a in args if a in ("feed", "story")] or ["feed", "story"]
+    langs = [a for a in args if a not in ("feed", "story")] or ["en", "fa", "ru", "ar"]
     for lang in langs:
         tpl = os.path.join(ROOT, "templates", f"{DATE}-{SLUG}-{lang}.html")
         open(tpl, "w", encoding="utf-8").write(html(lang))
-        out = os.path.join(ROOT, "posts", DATE, f"{DATE}-{SLUG}-{lang}.jpg")
-        subprocess.run([sys.executable, os.path.join(ROOT, "tools", "render.py"), tpl, out, "feed", "--no-strict"], check=True)
+        for mode in modes:
+            suffix = "" if mode == "feed" else "-story"
+            out = os.path.join(ROOT, "posts", DATE, f"{DATE}-{SLUG}-{lang}{suffix}.jpg")
+            # Feed JPEGs already published on 13 Nov 2026: only re-render them when feed is requested.
+            subprocess.run([sys.executable, os.path.join(ROOT, "tools", "render.py"), tpl, out, mode, "--no-strict"], check=True)
