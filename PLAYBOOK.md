@@ -99,6 +99,10 @@ charcoal + subtle gold (premium business) · clean neutrals (education) · one b
 - Pick type to suit the concept; vary the headline face day to day. Never use letter-spacing on Arabic script.
 
 ### LinkWin logo (non-negotiable rules)
+> **Update 13 Nov 2026 (Ali): the logo must be a subtle, naturally integrated highlight, never a copy-pasted image on a box or tab.
+> The default is now the "Seal signature + echo" treatment from `tools/linkwin_mark.py` (official mark traced 1:1 to a single-colour
+> vector in `brand/mark/`, see AUTOMATION.md › 3). This supersedes the rules below where they conflict (single-colour/tone-on-tone
+> use of the official shapes is allowed; paper tabs and pasted logo boxes are retired).**
 - Always use the original file `brand/linkwin-logo-original-cropped.png`. Never redraw, redesign, recolour, distort, crop into,
   outline, reinterpret or replace it, and never use a monogram or text-only substitute.
 - The full-colour original must appear at least once per image at a legible size (≥ 80 px tall on feed).

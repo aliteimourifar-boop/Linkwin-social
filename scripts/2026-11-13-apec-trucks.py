@@ -15,8 +15,8 @@ Composition: full-bleed photo; top scrim with kicker + headline (top-left LTR / 
 Type: IBM Plex Sans 600/400 (EN/RU) — first use as headline face; Vazirmatn 800/400 (FA, the face of linkwinco.com);
   IBM Plex Sans Arabic 600/400 (AR) stacked with IBM Plex Sans for Latin and digits.
 Imagery: photos/shenzhen-shennan-east-road-dusk.jpg — Dinkun Chen, Wikimedia Commons, CC BY-SA 4.0 (credited on image).
-Logo: B seal tab — paper tab with the full-colour original multiplied onto it, sitting in the footer bottom-right
-  LTR / bottom-left RTL (10 Nov: B tab top-left; 11 Nov: A bottom-left; 12 Nov: A top-right).
+Logo: "Seal signature + echo" (tools/linkwin_mark.py, Ali 13 Nov 2026): traced single-colour seal in #AC3E33 + hairline rule + 链赢贸易 / LinkWin Trading wordmarks in paper tint, on the footer grid bottom-right
+  LTR / bottom-left RTL; a 5 % paper-tint echo of the seal is cropped by the panel corner behind it. No box or tab.
 RTL plan: dir=rtl mirrors headline block, strip column order (days read right-to-left), bar alignment and logo side.
   Persian uses Persian digits and Solar Hijri dates (16–20 Nov 2026 = 25–29 Aban 1405); Arabic uses Western digits.
 
@@ -36,10 +36,11 @@ FACTS (all from sources fetched 13 Nov 2026)
 """
 import os, subprocess, sys
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, os.path.join(ROOT, 'tools'))
+from linkwin_mark import MARK_CSS, signature, echo
 DATE = "2026-11-13"
 SLUG = "apec-trucks"
 PHOTO = "../photos/shenzhen-shennan-east-road-dusk.jpg"
-LOGO = "../brand/linkwin-logo-original-cropped.png"
 
 T = {
 "en": dict(dir="ltr", lang="en",
@@ -70,7 +71,7 @@ T = {
         ("Крупные грузовики","Часть магистралей закрыта, 8:00–20:00",2,3),
         ("Малые грузовики","Запрет в Футяне, Лоху и Наньшане, 6:00–22:00",3,4)],
   hook="LinkWin — партнёр по торговле и логистике в Гонконге и Гуанчжоу",
-  src="Источники: уведомление полиции Шэньчжэня от 3.11.2026; Синьхуа, 13.11.2026",
+  src="Источники: полиция Шэньчжэня, 3.11.2026; Синьхуа, 13.11.2026",
   photo="Фото: Dinkun Chen / Wikimedia Commons, CC BY-SA 4.0"),
 "ar": dict(dir="rtl", lang="ar",
   kicker="أسبوع <bdi>APEC</bdi> في شنتشن",
@@ -121,9 +122,11 @@ body{{position:relative;font-family:{bf};color:#F6F4EF;-webkit-font-smoothing:an
 .kicker{{font:600 22px/1 {bf};letter-spacing:{ls};text-transform:{tt};color:#F3A93B;display:flex;align-items:center;gap:16px}}
 .kicker:before{{content:"";width:46px;height:2px;background:#F3A93B;display:block}}
 h1{{margin-top:30px;font:{'800' if lang=='fa' else '600'} {k['hsize']}px/{k['hlh']} {hf};letter-spacing:{'0' if rtl else '-.012em'};text-wrap:balance;color:#FFFFFF;text-shadow:0 2px 24px rgba(0,0,0,.35)}}
-.panel{{position:absolute;left:48px;right:48px;bottom:48px;padding:34px 40px 28px;border-radius:22px;
+.panel{{position:absolute;left:48px;right:48px;bottom:48px;padding:34px 40px 28px;border-radius:22px;overflow:hidden;
   background:rgba(10,20,42,.52);backdrop-filter:blur(14px) saturate(1.1);-webkit-backdrop-filter:blur(18px);
   border:1px solid rgba(246,244,239,.16)}}
+.panel>*:not(.lw-echo){{position:relative;z-index:1}}
+.panel{{--lw-echo-size:420px;--lw-echo-op:.05}}
 .ph{{display:flex;justify-content:space-between;align-items:baseline;font:600 {k['lab']}px/1.2 {bf};color:rgba(246,244,239,.72);letter-spacing:{ls};text-transform:{tt}}}
 .grid{{display:grid;grid-template-columns:repeat(5,1fr)}}
 .days{{margin:20px 0 6px;padding-bottom:14px;border-bottom:1px solid rgba(246,244,239,.22)}}
@@ -139,18 +142,18 @@ h1{{margin-top:30px;font:{'800' if lang=='fa' else '600'} {k['hsize']}px/{k['hlh
 .ft{{font:400 17px/1.5 {bf};color:rgba(246,244,239,.70)}}
 .ft .hook{{font:600 20px/1.4 {bf};color:#FFFFFF}}
 .ft .url{{font:600 20px/1.4 'IBM Plex Sans',sans-serif;color:#F3A93B;letter-spacing:.02em}}
-.tab{{flex:none;background:#F4F0E8;padding:12px 14px;border-radius:10px;box-shadow:0 10px 26px rgba(0,0,0,.35), inset 0 0 0 1px rgba(0,0,0,.05)}}
-.tab img{{display:block;height:96px;mix-blend-mode:multiply;filter:brightness(1.015)}}
+.foot{{align-items:center}}
+__MARKCSS__
 </style></head><body>
 <img class="photo" src="{PHOTO}" alt=""><div class="scrim"></div>
 <div class="top"><div class="kicker"><span>{t['kicker']}</span></div><h1>{t['h']}</h1></div>
-<div class="panel">
+<div class="panel">{echo('left' if rtl else 'right', '-210px', '-96px')}
   <div class="ph"><span>{t['month']}</span></div>
   <div class="grid days">{days}</div>
   {rows}
   <div class="foot"><div class="ft"><div class="hook">{t['hook']}</div><div class="url">linkwinco.com</div><div>{t['src']}</div><div>{t['photo']}</div></div>
-  <div class="tab"><img src="{LOGO}" alt="LinkWin"></div></div>
-</div></body></html>"""
+  {signature()}</div>
+</div></body></html>""".replace('__MARKCSS__', MARK_CSS)
 
 if __name__ == "__main__":
     langs = sys.argv[1:] or ["en", "fa", "ru", "ar"]

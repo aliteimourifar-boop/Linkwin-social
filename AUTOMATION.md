@@ -55,8 +55,22 @@ cd /workspace/Linkwin-social && gitw pull --ff-only
    canvas, horizontally clipped text, a web font that failed to load or a broken image.
    Fonts: `brand/fonts.css` (Playfair, Cormorant, Manrope, Oswald, IBM Plex Sans/Arabic, Space Grotesk, Noto Naskh/Kufi
    Arabic, Lalezar, **Vazirmatn**). Arabic-script faces have no Latin: stack a Latin face after them. RTL: `dir="rtl"` on `<html>`.
-3. Logo: original `brand/linkwin-logo-original-cropped.png` only, ≥80 px tall, treatment A/B/C per PLAYBOOK.md, never the same
-   position + treatment two days running.
+3. Logo — **default treatment "Seal signature + echo" (Ali, 13 Nov 2026: integrated, never pasted on; no white box/tab)**.
+   Use `tools/linkwin_mark.py` in every day script:
+   ```python
+   sys.path.insert(0, os.path.join(ROOT, "tools")); from linkwin_mark import MARK_CSS, signature, echo
+   # put MARK_CSS in the <style>, signature() on the layout grid (footer cell or masthead), and optionally
+   # echo("right"|"left", bottom, inset) inside a position:relative; overflow:hidden panel/section
+   ```
+   - signature = official seal as a single-colour vector in seal red `#AC3E33` (`--lw-seal`), a hairline rule, and the
+     official 链赢贸易 / LinkWin Trading wordmarks in the design's text tint (`--lw-ink`); seal height `--lw-sig-h` (≈60–70 px feed).
+     On light designs set `--lw-ink` to the ink colour; the seal may also go tone-on-tone (e.g. paper tint) if red clashes.
+   - echo = the same seal very large and faint (`--lw-echo-op` 4–7 %, `--lw-echo-size`), cropped by an edge, behind content.
+   - RTL: `dir="rtl"` mirrors the signature automatically; pass `echo("left")` for FA/AR.
+   - Vectors live in `brand/mark/` (`linkwin-seal.svg`, `linkwin-logo-full.svg`, `linkwin-wordmark-cn.svg`, `linkwin-wordmark-en.svg`),
+     traced 1:1 from the official transparent files `brand/mark/source-*.png` (linkwinco.com/assets/img/seal-light.png,
+     logo-full-light.png) by `tools/trace_logo.py`. Never redraw, distort or re-letter them; vary placement, size and tint only.
+   - QC: crop the logo area at 100 % and check edges are crisp, the wordmark is legible, nothing sits on a box.
 
 ## 4. QC (all must pass before anything is published)
 Open every JPEG with the Read tool (also a 100 % crop of the RTL text) and tick:
@@ -64,7 +78,7 @@ Open every JPEG with the Read tool (also a 100 % crop of the RTL text) and tick:
 - [ ] Language: reads natively; no literal translation; FA digits/Solar Hijri; AR digits; RU typography.
 - [ ] RTL: FA/AR right-aligned, letters joined, ZWNJ correct (e.g. می‌شود), Latin/digits in correct order, no letter-spacing.
 - [ ] No clipping/overflow/fallback glyphs (`tools/render.py` printed OK).
-- [ ] Logo: original file, legible (≥80 px), subtle, not a pasted white box, position differs from yesterday.
+- [ ] Logo: `linkwin_mark` signature (traced official mark), crisp at 100 % crop, wordmark legible, no box/tab, integrated in the grid.
 - [ ] Design: differs from the last 3 days (tone, palette, layout, headline face, logo treatment) per design-log.md.
 - [ ] Photo licence recorded in photos/CREDITS.md and credited.
 - [ ] Caption ≤2,200 chars, 4–6 hashtags ending #LinkWinTrading, linkwinco.com included.

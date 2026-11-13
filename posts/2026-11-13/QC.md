@@ -6,7 +6,7 @@
       13 Nov = 22 Aban); AR Western digits; RU 8:00–20:00 style.
 - [x] RTL: FA/AR right-aligned, day strip and bars mirrored (Monday on the right), joins and ZWNJ correct at 100 % crop.
 - [x] tools/render.py: 4 × OK (no overflow, clipping, font or image failures).
-- [x] Logo: original file on paper tab (B), 96 px tall, footer bottom-right LTR / bottom-left RTL (12 Nov was A, top-right).
+- [x] Logo (v2 after Ali's feedback): "Seal signature + echo": traced official seal in #AC3E33, 66 px, hairline rule, official wordmarks in paper tint, no box/tab; 5 % echo cropped by panel corner; mirrored for RTL; crisp at 100 %/300 % crops.
 - [x] Design differs from 10–12 Nov (dark photographic vs mid-light manila / celadon / cobalt; new headline face IBM Plex Sans / Vazirmatn).
 - [x] Photo: Dinkun Chen, Wikimedia Commons, CC BY-SA 4.0, credited on image + caption, recorded in photos/CREDITS.md.
 - [x] Captions ≤2,200 chars (EN 2052, FA 1930, RU 2107, AR 1899), 6 hashtags each ending #LinkWinTrading, linkwinco.com included.
