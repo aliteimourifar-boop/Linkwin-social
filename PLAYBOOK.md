@@ -147,6 +147,8 @@ Structure: hook → key facts (bullets) → why it matters → practical tip →
 No markdown, no AI-typical phrasing, max 2,200 characters.
 
 ## Technical workflow
+> **From 13 Nov 2026 the mechanics live in `AUTOMATION.md` (Grok Bot pipeline: tools/render.py, posts/YYYY-MM-DD/, Windsor execute_action). Follow that file; the list below is kept for history.**
+
 1. Repo: `aliteimourifar-boop/Linkwin-social` (attach with push access, clone to /home/claude/linkwin-social).
 2. Write `scripts/YYYY-MM-DD-<slug>.py` (creative brief in the docstring) that writes `templates/<slug>-<lang>.html` and renders with
    `python3 render.py <template> posts/<slug>-<lang>.jpg feed` and `... posts/<slug>-<lang>-story.jpg story`.

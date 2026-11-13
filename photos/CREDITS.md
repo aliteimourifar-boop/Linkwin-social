@@ -5,5 +5,7 @@ or owned by LinkWin. Add one line per file. Use JPEG, at least 2000 px on the lo
 
 Format: file · subject · photographer · source URL · licence · date added
 
-(No photos yet. As of 8 Nov 2026 the publishing workspace cannot download from photo sites, so photos need to be added
-to this folder directly, e.g. by uploading through GitHub, or the photo sites need to be allowed in the network settings.)
+(8 Nov 2026: photo sites were blocked from the old workspace. 13 Nov 2026: Wikimedia Commons and images.unsplash.com are
+reachable from the new Grok Bot box; download via the Commons API, see AUTOMATION.md.)
+
+- shenzhen-shennan-east-road-dusk.jpg · Shennan East Road, Shenzhen, blue-hour light trails toward the CBD · Dinkun Chen · https://commons.wikimedia.org/wiki/File:SHENNAN_EAST_ROAD,_SHENZHEN_(5).jpg · CC BY-SA 4.0 (credit on image + caption) · resized from 6960×4640 to 3000×2000 · 2026-11-13 · used 2026-11-13
