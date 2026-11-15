@@ -9,3 +9,4 @@ Format: file · subject · photographer · source URL · licence · date added
 reachable from the new Grok Bot box; download via the Commons API, see AUTOMATION.md.)
 
 - shenzhen-shennan-east-road-dusk.jpg · Shennan East Road, Shenzhen, blue-hour light trails toward the CBD · Dinkun Chen · https://commons.wikimedia.org/wiki/File:SHENNAN_EAST_ROAD,_SHENZHEN_(5).jpg · CC BY-SA 4.0 (credit on image + caption) · resized from 6960×4640 to 3000×2000 · 2026-11-13 · used 2026-11-13
+- yunnan-jinsha-river-ludila.jpg · Jinsha River upstream of Ludila Hydropower Station, between Binchuan and Yongsheng, Yunnan (pylons on the ridge) · Zhangmoon618 · https://commons.wikimedia.org/wiki/File:Jinshajiang_River_near_Ludila_Hydropower_Station.jpg · CC BY-SA 3.0 (credit on image + caption) · resized from 5184×3456 to 3000×2000 · 2026-11-15 · used 2026-11-15
