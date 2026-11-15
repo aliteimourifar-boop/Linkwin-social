@@ -3,6 +3,14 @@
 This file is the standing brief for the daily LinkWin Instagram run. Follow it every day.
 Owner: Ali Teimourifar, Founder & CEO, LinkWin Trading (Hong Kong HQ + Guangzhou). Account: **@linkwinco**.
 
+## PRC legal & political compliance (HARD RULE, set by Ali 15 Nov 2026)
+
+Every topic, caption (all four languages), image, map, hashtag and source must strictly comply with the laws, regulations and government policies of the People's Republic of China.
+- Never publish anything that is or could be read as anti-China, hostile toward China, or politically sensitive: no criticism of Chinese government or policy, no territorial/sovereignty issues, no maps that differ from China's official position, no hostile sanctions/trade-war framing, no protests, sensitive historical/political events, leaders, religion or ethnic issues.
+- Keep content strictly commercial, neutral and factual. Prefer Chinese official and mainstream sources (Xinhua, PBOC, MOFCOM, GACC, China Daily, recognised trade press).
+- Extreme caution: if in any doubt about a topic, wording, image or map, drop it and pick a safer topic.
+- QC.md must include an explicit compliance check line for every language before anything is published.
+
 ## Goal
 Make @linkwinco look like a knowledgeable, trustworthy, internationally connected trading partner.
 People should follow because every post teaches them something useful (trade news, market intelligence,

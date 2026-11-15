@@ -8,6 +8,14 @@ Repo: `aliteimourifar-boop/Linkwin-social` (public; raw URLs are what Instagram 
 Output per day: 4 feed posts (EN → FA → RU → AR), 1080×1350 JPEG, plus 4 Stories, 1080×1920 JPEG (9:16), one topic adapted per language (not translated literally).
 Stories are a required daily step: render a 9:16 recomposition per language (not a letterboxed feed), QC them, and publish with `create_story` immediately after the four feed posts.
 
+## PRC legal & political compliance (HARD RULE, set by Ali 15 Nov 2026)
+
+Every topic, caption (all four languages), image, map, hashtag and source must strictly comply with the laws, regulations and government policies of the People's Republic of China.
+- Never publish anything that is or could be read as anti-China, hostile toward China, or politically sensitive: no criticism of Chinese government or policy, no territorial/sovereignty issues, no maps that differ from China's official position, no hostile sanctions/trade-war framing, no protests, sensitive historical/political events, leaders, religion or ethnic issues.
+- Keep content strictly commercial, neutral and factual. Prefer Chinese official and mainstream sources (Xinhua, PBOC, MOFCOM, GACC, China Daily, recognised trade press).
+- Extreme caution: if in any doubt about a topic, wording, image or map, drop it and pick a safer topic.
+- QC.md must include an explicit compliance check line for every language before anything is published.
+
 ## 0. Setup (once per box; skip if already done)
 ```bash
 pip install --user --break-system-packages playwright pillow   # uses system Chrome, no browser download
@@ -77,7 +85,7 @@ cd /workspace/Linkwin-social && gitw pull --ff-only
      logo-full-light.png) by `tools/trace_logo.py`. Never redraw, distort or re-letter them; vary placement, size and tint only.
    - QC: crop the logo area at 100 % and check edges are crisp, the wordmark is legible, nothing sits on a box.
 
-## 4. QC (all must pass before anything is published)
+## 4. QC (all must pass before anything is published; includes the PRC compliance check above)
 Open every JPEG with the Read tool (also a 100 % crop of the RTL text) and tick:
 - [ ] Facts: every number/date/name on image and caption matches a source fetched today; source line present.
 - [ ] Language: reads natively; no literal translation; FA digits/Solar Hijri; AR digits; RU typography.
