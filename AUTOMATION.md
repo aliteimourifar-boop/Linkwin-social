@@ -8,6 +8,16 @@ Repo: `aliteimourifar-boop/Linkwin-social` (public; raw URLs are what Instagram 
 Output per day: 4 feed posts (EN → FA → RU → AR), 1080×1350 JPEG, plus 4 Stories, 1080×1920 JPEG (9:16), one topic adapted per language (not translated literally).
 Stories are a required daily step: render a 9:16 recomposition per language (not a letterboxed feed), QC them, and publish with `create_story` immediately after the four feed posts.
 
+## DAILY FORMAT (from 18 Nov 2026, set by Ali on 17 Nov; overrides any older "4 feed posts + 4 Stories" wording below)
+
+Each day publishes:
+1. **ONE carousel post** (`create_carousel_post`, params `image_urls` [2–10 JPEG URLs, 4:5, under 8 MB each] + `caption`) holding the day's topic in all four languages: one 1080x1350 slide per language (EN, FA, RU, AR), plus an optional sources/CTA slide.
+   - The **first slide's language rotates at random** each day. Pick a random order with the first language differing from yesterday's first language (check posted-log.md), and log the order.
+   - **One combined caption**, at most 2200 characters total: a short, native section per language in the same order as the slides (about 400–480 characters each, each with a 1–2 line hook, key facts and source names), then the shared hashtags, CTA and linkwinco.com. Write each section natively; FA and AR are RTL.
+2. **ONE short English video** (Reel) in the style Ali approved on 17 Nov (posts/2026-11-17/reel/, scripts/2026-11-17-reel.py): 1080x1920, about 15–30 s, motion graphics, real licensed photos, original or license-clear music, fast hook, the subtle integrated LinkWin mark at the end, and loop-friendly. Content should be an engaging, educational trade, shipping or sourcing format (quiz, "X vs Y", top-N, how-it-works, key numbers); it may follow the carousel topic or be its own. Publish it with `create_video_post` (`video_url`, `cover_url`, `caption` in EN, `share_to_feed: true`).
+3. **The same video as a Story**: `create_story` with `video_url` pointing at a Story encode (`ffmpeg ... -c:v libx264 -pix_fmt yuv420p -b:v 5M -maxrate 6M -bufsize 10M -g 30 -c:a aac -b:a 128k -ar 44100 -movflags +faststart`, saved as `*-story.mp4`). The full-bitrate reel file failed as a Story on 17 Nov.
+No separate per-language feed posts and no image Stories any more.
+
 ## PRC legal & political compliance (HARD RULE, set by Ali 15 Nov 2026)
 
 Every topic, caption (all four languages), image, map, hashtag and source must strictly comply with the laws, regulations and government policies of the People's Republic of China.
