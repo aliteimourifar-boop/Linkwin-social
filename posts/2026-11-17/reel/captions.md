@@ -1,0 +1,27 @@
+# Caption — 2026-11-17 Reel · Where are the world's top container lines from? (EN only)
+
+## EN (1652 chars)
+
+Did you get all nine? Here is where the world's major container lines are headquartered.
+
+• MSC: Geneva, Switzerland
+• Maersk: Copenhagen, Denmark
+• CMA CGM: Marseille, France
+• COSCO Shipping: Shanghai, China
+• Hapag-Lloyd: Hamburg, Germany
+• ONE (Ocean Network Express): Singapore, owned by Japan's NYK, MOL and K Line
+• HMM: Busan, South Korea
+• PIL (Pacific International Lines): Singapore
+• OOCL: Hong Kong, China, part of the COSCO Shipping group
+
+Why it matters: the name on the hull doesn't decide how well your cargo moves. Rates, transit times, port coverage and space on your lane do. Many lines also share ships through alliances and slot agreements, so your container can sail on a vessel painted in another carrier's colours.
+
+Practical tip: when you compare freight quotes, ask for the actual carrier, the vessel and the port rotation, not just the price. Check the free time at destination too, because demurrage and detention charges can wipe out a cheap rate.
+
+Shipping from China and want the right line for your lane? Talk to us at linkwinco.com
+
+Sources: carrier company profiles; HMM head office move to Busan: Seoul Economic Daily and The Herald Business (Oct 2026)
+Photos (cropped) via Wikimedia Commons: Petar Milošević (MSC, Maersk) CC BY-SA 4.0 · Matti Blume (CMA CGM) CC BY-SA 4.0 · Hummelhummel (COSCO Shipping) CC BY-SA 4.0 · Paul Harrison (Hapag-Lloyd) CC BY-SA 4.0 · Syced (ONE) CC0 · Ximonic / Simo Räsänen (HMM) CC BY-SA 4.0 · Flickr user 102748040@N03 (PIL) CC BY 2.0 · Bernard Spragg (OOCL) CC0
+Music: original score made for LinkWin
+
+#ContainerShipping #Freight #Logistics #ShippingLines #ChinaTrade #LinkWinTrading
