@@ -1,0 +1,15 @@
+{
+ "order": [
+  "ru",
+  "en",
+  "ar",
+  "fa"
+ ],
+ "image_urls": [
+  "https://raw.githubusercontent.com/aliteimourifar-boop/Linkwin-social/main/posts/2026-11-20/2026-11-20-port-milestones-1-ru.jpg",
+  "https://raw.githubusercontent.com/aliteimourifar-boop/Linkwin-social/main/posts/2026-11-20/2026-11-20-port-milestones-2-en.jpg",
+  "https://raw.githubusercontent.com/aliteimourifar-boop/Linkwin-social/main/posts/2026-11-20/2026-11-20-port-milestones-3-ar.jpg",
+  "https://raw.githubusercontent.com/aliteimourifar-boop/Linkwin-social/main/posts/2026-11-20/2026-11-20-port-milestones-4-fa.jpg"
+ ],
+ "caption_file": "caption-carousel.txt"
+}
