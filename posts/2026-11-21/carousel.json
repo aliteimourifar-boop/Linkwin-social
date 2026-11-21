@@ -1,0 +1,15 @@
+{
+ "order": [
+  "en",
+  "fa",
+  "ru",
+  "ar"
+ ],
+ "image_urls": [
+  "https://raw.githubusercontent.com/aliteimourifar-boop/Linkwin-social/main/posts/2026-11-21/2026-11-21-ferrochrome-weak-1-en.jpg",
+  "https://raw.githubusercontent.com/aliteimourifar-boop/Linkwin-social/main/posts/2026-11-21/2026-11-21-ferrochrome-weak-2-fa.jpg",
+  "https://raw.githubusercontent.com/aliteimourifar-boop/Linkwin-social/main/posts/2026-11-21/2026-11-21-ferrochrome-weak-3-ru.jpg",
+  "https://raw.githubusercontent.com/aliteimourifar-boop/Linkwin-social/main/posts/2026-11-21/2026-11-21-ferrochrome-weak-4-ar.jpg"
+ ],
+ "caption_file": "caption-carousel.txt"
+}
