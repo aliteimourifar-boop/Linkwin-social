@@ -10,6 +10,15 @@ Stories are a required daily step: render a 9:16 recomposition per language (not
 
 ## DAILY FORMAT (from 18 Nov 2026, set by Ali on 17 Nov; overrides any older "4 feed posts + 4 Stories" wording below)
 
+## VIDEO CREATIVE DIRECTION (Ali, 23 Nov 2026), overrides "in the style approved on 17 Nov"
+"Your videos are starting to look too similar. Be much more creative and experimental with each new video. Avoid repeating the same templates, animations, transitions, music and visual styles. Explore fresh, modern graphic designs, diverse visual concepts, premium-quality animations and professional background music that matches the topic and mood. Give every video its own unique identity while maintaining a consistent, high-end corporate image for LinkWin."
+- Read video-log.md first; today's video must differ from the last 7 on art direction, layout, palette, fonts, animation, transitions, music and structure. Write the renderer fresh each day.
+- Commit to one named art direction per video (Swiss grid, kinetic type, editorial, isometric/3D-style, data-viz, blueprint, documentary photo/footage, duotone, cinematic letterbox, market terminal, macro material textures and so on).
+- Premium motion: proper easing, motion blur, clean grids, quality fonts, no jitter or banding.
+- Music: professional and mood-matched, either a license-clear track (Pixabay Music, CC0, or CC BY with credit; check the licence) or a sample-based original (FluidSynth + SoundFont, mixed). No bare sine-wave beds. Around -14 LUFS, synced cuts.
+- Real licensed imagery or footage only, credited. Constant brand layer: subtle LinkWin mark + linkwinco.com end card styled to the concept.
+- QC: compare 6-8 frames against the previous 3 videos; redesign if it reads as a variation. Log the entry in video-log.md.
+
 Each day publishes:
 1. **ONE carousel post** (`create_carousel_post`, params `image_urls` [2–10 JPEG URLs, 4:5, under 8 MB each] + `caption`) holding the day's topic in all four languages: one 1080x1350 slide per language (EN, FA, RU, AR), plus an optional sources/CTA slide.
    - The **first slide's language rotates at random** each day. Pick a random order with the first language differing from yesterday's first language (check posted-log.md), and log the order.
