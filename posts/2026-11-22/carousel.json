@@ -1,0 +1,15 @@
+{
+ "order": [
+  "ru",
+  "ar",
+  "fa",
+  "en"
+ ],
+ "image_urls": [
+  "https://raw.githubusercontent.com/aliteimourifar-boop/Linkwin-social/main/posts/2026-11-22/2026-11-22-two-new-trade-talks-1-ru.jpg",
+  "https://raw.githubusercontent.com/aliteimourifar-boop/Linkwin-social/main/posts/2026-11-22/2026-11-22-two-new-trade-talks-2-ar.jpg",
+  "https://raw.githubusercontent.com/aliteimourifar-boop/Linkwin-social/main/posts/2026-11-22/2026-11-22-two-new-trade-talks-3-fa.jpg",
+  "https://raw.githubusercontent.com/aliteimourifar-boop/Linkwin-social/main/posts/2026-11-22/2026-11-22-two-new-trade-talks-4-en.jpg"
+ ],
+ "caption_file": "caption-carousel.txt"
+}

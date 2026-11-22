@@ -37,3 +37,7 @@ Music: original synthesized score, scripts/2026-11-17-reel-audio.py (created for
 - ningbo-zhenhai-port-dusk.jpg · Zhenhai port area of Ningbo-Zhoushan Port at dusk, 17 May 2020 · Nbfreeh · https://commons.wikimedia.org/wiki/File:Zhenhai_Port_2020-05-17.jpg · CC BY-SA 4.0 · used 2026-11-20 (carousel)
 Music 2026-11-20: original synthesized score, scripts/2026-11-20-reel-audio.py (created for LinkWin, no third-party material).
 - chromite-serpentine-geodil-1394.jpg (+ -cutout.png, background removed by script, no other edits) · Chromite with serpentine, mineral specimen (GeoDIL 1394) · Darla Sondrol · https://commons.wikimedia.org/wiki/File:Chromite_with_serpentine_(GeoDIL_number_-_1394).jpg · CC0 · used 2026-11-21 (carousel)
+- singapore-pasir-panjang-cranes.jpg · Pasir Panjang Container Terminal, Singapore, 27 Feb 2011 · Jacklee · https://commons.wikimedia.org/wiki/File:Pasir_Panjang_Container_Terminal,_Singapore_-_20110227-01.jpg · CC BY-SA 3.0 · used 2026-11-22 (carousel)
+- reel-yangshan-container-lanes.jpg · Yangshan Port container terminal lanes · Reb42 · https://commons.wikimedia.org/wiki/File:Yangshan-Port-Containers.jpg · CC BY 3.0 · used 2026-11-22 (Reel hook)
+- reel-yangshan-yard-overview.jpg · Yangshan Port container yard overview, 23 Sep 2017 · Gmbsfd · https://commons.wikimedia.org/wiki/File:Yangshan_Port_20170923-3.jpg · CC BY-SA 4.0 · used 2026-11-22 (Reel end card)
+Music 2026-11-22: original synthesized score, scripts/2026-11-22-reel-audio.py (created for LinkWin, no third-party material).
