@@ -51,8 +51,8 @@ def pill(key,y,label,cn,filled,dots):
     L(key,x0+52,y+h/2-15,label,mont(28,600),col,6)
     L(key+'cn',x1-52,y+h/2-22,cn,scsans(30),col,4,'r')
     boxes[key+'pill']=(x0,y,x1,y+h)
-w=L('vote',M,1148,'TAP TO VOTE ·',mont(18,500),CREAM,5)
-L('votecn',M+w+12,1144,'选一个',scsans(20),CREAM,4)
+w=L('vote',M,1148,'REPLY TO VOTE ·',mont(18,500),CREAM,5)
+L('votecn',M+w+12,1144,'回复告诉我们',scsans(20),CREAM,4)
 pill('o1',1192,'BRING THE HEAT','来点辣',True,3)
 pill('o2',1322,'KEEP IT MILD','不要辣',False,0)
 # info
