@@ -1,0 +1,20 @@
+Can you read 7202.41? Every traded product has a code like this.
+
+HS codes, decoded:
+• 72 = Chapter: iron and steel
+• 7202 = Heading: ferro-alloys
+• 7202.41 = Subheading: ferro-chromium, more than 4% carbon
+
+Same heading, different alloys: 7202.11 ferro-manganese (>2% carbon), 7202.21 ferro-silicon (>55% silicon), 7202.30 ferro-silico-manganese.
+
+The Harmonized System has 5,000+ commodity groups, is used by 200+ countries and economies as the basis for their customs tariffs, and covers over 98% of goods in world trade.
+
+Tip: after six digits, codes go national. Confirm the full local code with your customs broker before you ship.
+
+Sourcing ferroalloys or metals from China? Talk to LinkWin Trading: linkwinco.com
+
+Sources: World Customs Organization (What is the HS?; HS Nomenclature 2022, Chapter 72)
+Photos: Ferrosilicon, Ferrochrome · FocalPoint · CC BY-SA 4.0 · Wikimedia Commons (duotone)
+Music: original composition for LinkWin
+
+#HSCode #CustomsClearance #Ferroalloys #ImportExport #ChinaSourcing #LinkWinTrading

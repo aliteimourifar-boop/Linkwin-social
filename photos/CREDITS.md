@@ -41,3 +41,7 @@ Music 2026-11-20: original synthesized score, scripts/2026-11-20-reel-audio.py (
 - reel-yangshan-container-lanes.jpg · Yangshan Port container terminal lanes · Reb42 · https://commons.wikimedia.org/wiki/File:Yangshan-Port-Containers.jpg · CC BY 3.0 · used 2026-11-22 (Reel hook)
 - reel-yangshan-yard-overview.jpg · Yangshan Port container yard overview, 23 Sep 2017 · Gmbsfd · https://commons.wikimedia.org/wiki/File:Yangshan_Port_20170923-3.jpg · CC BY-SA 4.0 · used 2026-11-22 (Reel end card)
 Music 2026-11-22: original synthesized score, scripts/2026-11-22-reel-audio.py (created for LinkWin, no third-party material).
+- cr-express-zhengzhou-putian.jpg · CR Express (China–Europe Railway Express) container train near Putian, Zhengzhou, 12 Jun 2020 · Windmemories · https://commons.wikimedia.org/wiki/File:CR_Express_train_near_Putian,_Zhengzhou_2020061202.jpg · CC BY-SA 4.0 · used 2026-11-23 (carousel)
+- reel-ferrosilicon-lump-focalpoint.jpg · Ferrosilicon lump · FocalPoint · https://commons.wikimedia.org/wiki/File:Ferrosilicon.JPG · CC BY-SA 4.0 · used 2026-11-23 (Reel, navy/paper duotone = modified)
+- reel-ferrochrome-lump-focalpoint.jpg · Ferrochrome lump · FocalPoint · https://commons.wikimedia.org/wiki/File:Ferrochrome.JPG · CC BY-SA 4.0 · used 2026-11-23 (Reel + end card, navy/paper duotone = modified)
+Music 2026-11-23: original sample-based composition, scripts/2026-11-23-reel-music.py (FluidSynth + FluidR3_GM SoundFont, MIT licence; created for LinkWin, no third-party recordings).

@@ -1,0 +1,15 @@
+{
+ "order": [
+  "fa",
+  "en",
+  "ar",
+  "ru"
+ ],
+ "image_urls": [
+  "https://raw.githubusercontent.com/aliteimourifar-boop/Linkwin-social/main/posts/2026-11-23/2026-11-23-rail-both-ways-1-fa.jpg",
+  "https://raw.githubusercontent.com/aliteimourifar-boop/Linkwin-social/main/posts/2026-11-23/2026-11-23-rail-both-ways-2-en.jpg",
+  "https://raw.githubusercontent.com/aliteimourifar-boop/Linkwin-social/main/posts/2026-11-23/2026-11-23-rail-both-ways-3-ar.jpg",
+  "https://raw.githubusercontent.com/aliteimourifar-boop/Linkwin-social/main/posts/2026-11-23/2026-11-23-rail-both-ways-4-ru.jpg"
+ ],
+ "caption_file": "caption-carousel.txt"
+}
