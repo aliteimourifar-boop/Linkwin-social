@@ -1,0 +1,12 @@
+# QC · Thai Narak Story 2026-11-24 DINNER
+- File: story-2026-11-24-dinner.jpg · 1080x1920 · JPEG q94 4:4:4 · script dinner.py (`/workspace/tn-venv/bin/python dinner.py story-2026-11-24-dinner.jpg`)
+- Art direction: 6 Rattan & Wood Warmth (amber-graded real shopfront, honey-wood plank field, cream type, gold hairline and gold-foil wordmark; no black/charcoal field)
+- Layout: "wayfinding". Real shopfront photo fills the top ~1000 px and feathers into honey wood. One continuous 2 px gold hairline starts at a marker on the lit entrance in the photo, drops down, turns left with rounded corners under the left-aligned headline, then runs down through 3 stops: shop address → ~420 m walk → Metro Line 1 Ximenkou (filled end marker). Hours + small gold-foil traced wordmark bottom-right. Asymmetric, left editorial margin 96 px.
+- Differs from: 11-23 lunch (linen page, off-right print), 11-23 dinner (red typographic poll, top-heavy), 11-24 lunch (full-bleed photo, lower-right stack), 11-21 dinner Rattan (honey top third, centred lockup, room rising from below).
+- Copy: "Find us / *at Ximenkou.*" · 西门口广场一楼外围 137-1、139铺 · 荔湾区中山七路48号 · ~420 M · 步行约420米 · METRO LINE 1 · XIMENKOU · 地铁1号线西门口站 · DINNER 17:00–22:00 晚市
+- Facts: address 广州市荔湾区中山七路48号西门口广场137-1、139铺 (商场一楼外围) per weekly plan facts line; 420 m per dianping-live-2026-11-17.md ("距地铁1号线西门口站出入口步行420m") and brand-kit.md ("~420 m"); dinner 17:00–22:00. Nothing dropped, nothing invented.
+- Assets: S/owner-photos/shopfront-outdoor-seating-01.jpg (6000x4000 real photo; crop x1055–4490 y830–4012; amber grade; top edge burned to hide cut-off fascia letters; feathered burn+desaturate on the left kiosk poster/side signage). Logo = potrace-traced `word` lockup, gold foil, uniform scale 62 px tall. No AI imagery; wood field procedural texture.
+- Text bounds (bbox assert 250 ≤ y ≤ 1570): headline 1006–1197; route 1275–1557; hours 1458–1480; signature 1503–1566. Overall text y 1006–1566. Top 250 / bottom 350 clear.
+- CJK: cmap check Noto Serif CJK SC + Noto Sans CJK SC, 0 missing glyphs; visual crops qc/crop-route.png, qc/crop-sig.png show no tofu.
+- PRC: no map, flags, politics, religion, royal imagery, superlatives. Route line is an abstract hairline, not a map.
+- CD critique: v1 had the left kiosk poster competing with the entrance and a stripy "brushed metal" wood; v2 tighter crop cut off the Thai/Chinese neon lines (rejected); final = v1 crop + kiosk burn/desaturate, softer grain with plank seams. Thumbnail qc/thumb.png: headline and route read at phone size.
