@@ -1,0 +1,15 @@
+{
+ "order": [
+  "en",
+  "ar",
+  "fa",
+  "ru"
+ ],
+ "image_urls": [
+  "https://raw.githubusercontent.com/aliteimourifar-boop/Linkwin-social/main/posts/2026-11-24/2026-11-24-auto-stamp-1-en.jpg",
+  "https://raw.githubusercontent.com/aliteimourifar-boop/Linkwin-social/main/posts/2026-11-24/2026-11-24-auto-stamp-2-ar.jpg",
+  "https://raw.githubusercontent.com/aliteimourifar-boop/Linkwin-social/main/posts/2026-11-24/2026-11-24-auto-stamp-3-fa.jpg",
+  "https://raw.githubusercontent.com/aliteimourifar-boop/Linkwin-social/main/posts/2026-11-24/2026-11-24-auto-stamp-4-ru.jpg"
+ ],
+ "caption_file": "caption-carousel.txt"
+}

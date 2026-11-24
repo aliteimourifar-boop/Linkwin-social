@@ -1,0 +1,19 @@
+EN | China's customs printouts now come pre-stamped.
+The Single Window can now add your customs declaration seal automatically when you print the declaration check sheet, inspection/release notice, permitted-removal notice, paperless release notice or agency agreement. No more print, stamp by hand, scan. Pilot: Qingdao and Hangzhou since 11 Nov; 11 more districts from 23 Nov, incl. Shanghai, Ningbo, Guangzhou and Shenzhen.
+Source: China E-Port Data Center, 11 & 23 Nov 2026
+
+AR | الاستمارات الجمركية في الصين تُطبع الآن مختومة تلقائياً.
+أصبحت النافذة الواحدة تضيف ختم التصريح الجمركي تلقائياً عند طباعة ورقة مطابقة البيان وإشعار المعاينة/الإفراج وإذن سحب البضائع وإشعار الإفراج الإلكتروني واتفاقية التخليص بالوكالة، بدلاً من الطباعة ثم الختم يدوياً ثم المسح الضوئي. بدأت التجربة في تشينغداو وهانغتشو منذ 11 نوفمبر، وتوسعت في 23 نوفمبر إلى 11 منطقة أخرى منها شانغهاي ونينغبو وقوانغتشو وشنتشن.
+المصدر: مركز بيانات الميناء الإلكتروني الصيني
+
+FA | برگه‌های گمرکی چین حالا مُهرخورده چاپ می‌شوند.
+پنجره واحد تجارت چین هنگام چاپ برگه کنترل اظهارنامه، اعلامیه بازرسی/ترخیص، مجوز خروج کالا، اعلامیه ترخیص بدون کاغذ و قرارداد وکالت ترخیص، مُهر مخصوص اظهار گمرکی شرکت را خودکار می‌زند؛ دیگر چاپ، مُهر دستی و اسکن لازم نیست. طرح از ۲۰ آبان در چینگدائو و هانگژو آغاز شد و از ۲ آذر به ۱۱ حوزه دیگر، از جمله شانگهای، نینگبو، گوانگژو و شنژن، رسید.
+منبع: مرکز داده بندر الکترونیک چین
+
+RU | Таможенные бланки в Китае теперь печатаются сразу с печатью.
+«Единое окно» само ставит печать декларанта при печати контрольного листа декларации, уведомлений о досмотре/выпуске и разрешении вывоза, уведомления о безбумажном выпуске и договора с таможенным представителем. Больше не нужно печатать, штамповать и сканировать. Пилот: Циндао и Ханчжоу с 11.11, ещё 11 округов с 23.11, включая Шанхай, Нинбо, Гуанчжоу и Шэньчжэнь.
+Источник: China E-Port Data Center
+
+Tip: set the seal up once with the legal-rep card; it stamps only forms your company declared.
+Importing from China? Talk to LinkWin Trading: linkwinco.com
+#ChinaCustoms #SingleWindow #CustomsClearance #ImportExport #LinkWinTrading
