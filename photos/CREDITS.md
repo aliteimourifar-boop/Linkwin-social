@@ -45,3 +45,7 @@ Music 2026-11-22: original synthesized score, scripts/2026-11-22-reel-audio.py (
 - reel-ferrosilicon-lump-focalpoint.jpg · Ferrosilicon lump · FocalPoint · https://commons.wikimedia.org/wiki/File:Ferrosilicon.JPG · CC BY-SA 4.0 · used 2026-11-23 (Reel, navy/paper duotone = modified)
 - reel-ferrochrome-lump-focalpoint.jpg · Ferrochrome lump · FocalPoint · https://commons.wikimedia.org/wiki/File:Ferrochrome.JPG · CC BY-SA 4.0 · used 2026-11-23 (Reel + end card, navy/paper duotone = modified)
 Music 2026-11-23: original sample-based composition, scripts/2026-11-23-reel-music.py (FluidSynth + FluidR3_GM SoundFont, MIT licence; created for LinkWin, no third-party recordings).
+- reel-pudong-night-huangpu.jpg · Pudong skyline at night from the Huangpu River, 17 Apr 2026 · DvTor8303 · https://commons.wikimedia.org/wiki/File:Pudong_skyline_at_night_from_Huangpu_River_20260417_(1).jpg · CC0 · used 2026-11-24 (Reel, defocused = modified)
+- reel-zhujiang-new-town-night.jpg · Zhujiang New Town at night, Guangzhou, 28 Dec 2021 · 钉钉 · https://commons.wikimedia.org/wiki/File:Zhujiang_New_Town_at_night_10.jpg · CC BY-SA 4.0 · used 2026-11-24 (Reel, defocused = modified)
+Music 2026-11-24: original sample-based composition, scripts/2026-11-24-reel-music.py (FluidSynth + FluidR3_GM SoundFont, MIT licence; created for LinkWin, no third-party recordings).
+Fonts added 2026-11-24: Unbounded, Golos Text, Syne, DM Sans (SIL OFL 1.1, via Fontsource; licences in fonts/lib/).
