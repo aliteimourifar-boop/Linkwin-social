@@ -1,4 +1,5 @@
-# Thai Narak Story 2026-11-25 LUNCH v2 - "Lemongrass: / bruise, don't chop." Daylight Editorial (typographic hero)
+# Thai Narak Story 2026-11-25 LUNCH v3 (v3: blade-mask closing - no notches; see block after keep*=reg)
+# v2: - "Lemongrass: / bruise, don't chop." Daylight Editorial (typographic hero)
 # v2 (CD rejection of v1: root hero mismatched headline, blown root highlights, inpaint smudge, tiny logo, dead bottom):
 # ONLY the green lemongrass blades from top-left of food-garlic-bread.png are keyed out (HSV green key + bright-highlight
 # fill, geometric guard far above the roots, dark stone pixels zeroed, 1.2px feather) - zero root / newspaper pixels.
@@ -9,7 +10,7 @@ import sys;sys.path.insert(0,'/workspace/tn-run/rd')
 from dlib import *
 from scipy.ndimage import gaussian_filter
 import cv2
-W,H=1080,1920; OUT=sys.argv[1] if len(sys.argv)>1 else 'story-2026-11-25-lunch-v2.jpg'
+W,H=1080,1920; OUT=sys.argv[1] if len(sys.argv)>1 else 'story-2026-11-25-lunch-v3.jpg'
 P='/cursor/stores/store-71c2a87a-216e-4174-bacc-f3ef6c2eaf39/thai-narak/assets/owner-photos/food-garlic-bread.png'
 im=np.asarray(Image.open(P).convert('RGB'))[:420,:1600]
 hsv=cv2.cvtColor(im,cv2.COLOR_RGB2HSV_FULL).astype(float)
@@ -32,8 +33,28 @@ for i in range(1,hn+1):
 gap=((keep>0)&(v<0.24)&(a<0.3)).astype(np.uint8)   # tiny stone slivers between overlapping blades
 im=cv2.inpaint(im,cv2.dilate(gap,np.ones((3,3))),5,cv2.INPAINT_TELEA)   # re-filled with neighbouring leaf colour (no stone left)
 keep*=reg
+# v3: close the bundle silhouette - notches between overlapping blades (stone keyed out) are bays open to the page,
+# so a large elliptical closing + hole fill seals them; sealed pixels get leaf colour from adjacent blades
+# (normalised-convolution fill) darkened ~30% to read as shadow between blades, plus blade-direction texture.
+CK=int(sys.argv[2]) if len(sys.argv)>2 else 71
+cl=cv2.morphologyEx(keep,cv2.MORPH_CLOSE,cv2.getStructuringElement(cv2.MORPH_ELLIPSE,(CK,CK)))
+cl=(binary_fill_holes(cl)&(reg>0)).astype(np.uint8)
+ki=cv2.erode(keep,np.ones((7,7)))                 # colour source: blade interiors only (no dark stone rim)
+gapm=(cl>0)&(ki==0)
+kf=ki.astype(np.float32); imf=im.astype(np.float32)
+fill=np.zeros_like(imf)
+for sg in (4,12,30):
+    num=np.dstack([gaussian_filter(imf[...,c]*kf,sg) for c in range(3)]); den=gaussian_filter(kf,sg)[...,None]
+    est=num/np.maximum(den,1e-4); fill=np.where((fill.sum(2,keepdims=True)==0)&(den>0.03),est,fill)
+d2=cv2.distanceTransform(gapm.astype(np.uint8),cv2.DIST_L2,3); sh=0.92-0.20*np.clip((d2-3)/14,0,1)  # soft shadow deepening into the seam
+tex=gaussian_filter(np.random.default_rng(7).normal(0,1,im.shape[:2]),1.2)*4
+fillc=np.clip(fill*sh[...,None]+tex[...,None],0,255)
+wgt=gaussian_filter(gapm.astype(np.float32),2.5)*gapm + gaussian_filter(gapm.astype(np.float32),2.5)*(~gapm)  # feathered seam blend
+wgt=np.where(gapm,np.maximum(wgt,np.clip(d2/4,0,1)),wgt)[...,None]
+im=np.clip(imf*(1-wgt)+fillc*wgt,0,255).astype(np.uint8)
+keep=cl
 keep=cv2.erode(keep,np.ones((3,3)))
-alpha=gaussian_filter(keep.astype(np.float32),1.2)
+alpha=gaussian_filter(keep.astype(np.float32),1.6)
 ys,xs=np.where(alpha>0.02); x0,x1,y1=xs.min(),xs.max()+1,ys.max()+1
 f=im.astype(np.float32)
 f=np.clip(f*1.22+14,0,255)                      # light daylight brighten, natural colour
@@ -84,4 +105,4 @@ boxes['logo']=(sx,sy,sx+wm.width,sy+wm.height)
 for kk,b in boxes.items(): assert b[1]>=250 and b[3]<=1570,(kk,b)
 print({kk:tuple(int(v) for v in b) for kk,b in boxes.items()}, 'logo size',wm.size)
 img.convert('RGB').save(OUT,quality=94,subsampling=0)
-img.convert('RGB').resize((540,960)).save('/tmp/v2half.png')
+img.convert('RGB').resize((540,960)).save('/tmp/v3half.png')

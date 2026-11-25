@@ -31,3 +31,10 @@ Text: "Lemongrass:" Cormorant Garamond Light 168px #3A2A1E · "bruise, don’t c
 Logo: traced `word` lockup, gold foil, 92px tall (169x92, proportional), centred under the stack.
 Text bboxes (y): h1 776–927, h2 933–1074, cn 1111–1169, hours 1237–1262, logo 1390–1482 -> all within 250–1570 (asserted).
 CJK: Noto CJK glyphs, visual crop read, no tofu. No boxes/borders/collage, no black. AI imagery: none.
+
+## v3 (2026-11-25 touch-up) — blade notches
+- CD note: jagged rectangular cream notches along blades (stone between overlapping blades keyed out).
+- Fix: 71px elliptical closing + hole fill of bundle silhouette (within guard polygon); sealed seams filled with
+  adjacent-blade leaf colour (normalised convolution from eroded blade interiors) darkened 8–28% as inter-blade shadow,
+  2.5px feathered blend; outer alpha feather 1.6px. Type, layout, colours, logo unchanged (rows 500–1500 identical to v2 within JPEG noise).
+- Checked full frame + top/bottom close-ups: no notches, no dark stone halo. Output story-2026-11-25-lunch-v3.jpg 1080x1920.
