@@ -1,1 +1,16 @@
-{"order": ["ru","ar","fa","en"], "caption_file": "caption-carousel.txt"}
+{
+ "order": [
+  "ru",
+  "ar",
+  "fa",
+  "en"
+ ],
+ "image_urls": [
+  "https://raw.githubusercontent.com/aliteimourifar-boop/Linkwin-social/3db24e7c2d0ea24b80238ff042b83b4fde512189/posts/2026-11-27/2026-11-27-china-iran-trade-1-ru.jpg",
+  "https://raw.githubusercontent.com/aliteimourifar-boop/Linkwin-social/3db24e7c2d0ea24b80238ff042b83b4fde512189/posts/2026-11-27/2026-11-27-china-iran-trade-2-ar.jpg",
+  "https://raw.githubusercontent.com/aliteimourifar-boop/Linkwin-social/3db24e7c2d0ea24b80238ff042b83b4fde512189/posts/2026-11-27/2026-11-27-china-iran-trade-3-fa.jpg",
+  "https://raw.githubusercontent.com/aliteimourifar-boop/Linkwin-social/3db24e7c2d0ea24b80238ff042b83b4fde512189/posts/2026-11-27/2026-11-27-china-iran-trade-4-en.jpg"
+ ],
+ "caption_file": "caption-carousel.txt",
+ "carousel_media_id": "18422009842092876"
+}
