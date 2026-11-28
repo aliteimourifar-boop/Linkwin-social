@@ -15,7 +15,7 @@ Stories are a required daily step: render a 9:16 recomposition per language (not
 - Read video-log.md first; today's video must differ from the last 7 on art direction, layout, palette, fonts, animation, transitions, music and structure. Write the renderer fresh each day.
 - Commit to one named art direction per video (Swiss grid, kinetic type, editorial, isometric/3D-style, data-viz, blueprint, documentary photo/footage, duotone, cinematic letterbox, market terminal, macro material textures and so on).
 - Premium motion: proper easing, motion blur, clean grids, quality fonts, no jitter or banding.
-- Music: professional and mood-matched, either a license-clear track (Pixabay Music, CC0, or CC BY with credit; check the licence) or a sample-based original (FluidSynth + SoundFont, mixed). No bare sine-wave beds. Around -14 LUFS, synced cuts.
+- Music (UPDATED by Ali, 28 Nov 2026: self-made music sounded artificial): NEVER compose/synthesize music (no FluidSynth, SoundFont, MIDI, script or AI music). Use only a real, professionally produced, human-recorded track licensed for commercial social use (Pixabay Music, FMA CC BY/CC0), licence saved and credited, different genre/artist/tempo from the last 7, cut on musical phrases, beat-synced, -14 LUFS, TP < -1 dBTP. No suitable track = carousel only, tell Ali.
 - Real licensed imagery or footage only, credited. Constant brand layer: subtle LinkWin mark + linkwinco.com end card styled to the concept.
 - QC: compare 6-8 frames against the previous 3 videos; redesign if it reads as a variation. Log the entry in video-log.md.
 
