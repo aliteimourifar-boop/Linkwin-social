@@ -1,12 +1,13 @@
-# READY — Thai Narak Hindi Reel "हरी, पीली, गहरी" — PREPARED, PENDING PUBLISH
+# READY — Thai Narak Hindi Reel "हरी, पीली, गहरी" v2 — PREPARED, PENDING PUBLISH
 
 - Publish slot: **Sun 29 Nov 2026, ~11:30 Asia/Shanghai** (scheduled run publishes; nothing has been published yet)
 - Instagram account id: **17841463444383820** (@thai.narak.restaurant)
 - Windsor call: execute_action **create_video_post** (connector instagram) as a **Reel** (media_type REELS), **share_to_feed: true**, **cover_url** = cover below, caption = exact text below
-- video_url: https://raw.githubusercontent.com/aliteimourifar-boop/Linkwin-social/main/thai-narak/2026-11-29/reel-hi/reel-2026-11-29-hi-three-curries.mp4
-- cover_url: https://raw.githubusercontent.com/aliteimourifar-boop/Linkwin-social/main/thai-narak/2026-11-29/reel-hi/cover-2026-11-29-hi-three-curries.jpg
-- Video: 22.5 s, 1080x1920, H.264 High, native 24 fps (540 frames), AAC 48 kHz 256k, −14.0 LUFS / −1.9 dBTP, ~43.6 MB
+- video_url: https://raw.githubusercontent.com/aliteimourifar-boop/Linkwin-social/main/thai-narak/2026-11-29/reel-hi/reel-2026-11-29-hi-three-curries-v2.mp4
+- cover_url: https://raw.githubusercontent.com/aliteimourifar-boop/Linkwin-social/main/thai-narak/2026-11-29/reel-hi/cover-2026-11-29-hi-three-curries-v2.jpg
+- Video: 22.5 s, 1080x1920, H.264 High, native 24 fps (540 frames), AAC 48 kHz 256k, −14.0 LUFS / −1.9 dBTP, ~43.0 MB
 - Music: "Dry Gin" by Michael Ramir C. (Mixkit Stock Music Free License; no attribution required), clip 15.02–37.52 s
+- v2 change (Ali, 28 Nov): no on-screen AI label on the video or the cover. The AI disclosure is the last line of the caption, after the hashtags. Everything else is unchanged from v1.
 - After publishing: log the media id in content-log.md (both copies) and mark the LIBRARY.md usage row as published. Never claim published without a Windsor media id.
 
 ## Exact final caption
@@ -25,7 +26,7 @@ Thai Narak में हमारी करी ताज़ी हर्ब्�
 Green, yellow or deep and rich — which Thai curry is yours today? Handmade curry pastes and fresh herbs, for lunch or dinner near Ximenkou.
 蕉媚泰国餐厅 · 广州市荔湾区中山七路48号西门口广场137-1、139铺 · 地铁1号线西门口站
 
-इस वीडियो के सभी फ़ूड शॉट्स AI विज़ुअलाइज़ेशन हैं। / All food shots in this video are AI visualisations.
-
 #थाईकरी #करी #खाना #फूडी #CurryLover #ThaiCurry #GreenCurry #MassamanCurry #ThaiFood #Guangzhou #GuangzhouFood #广州美食 #荔湾美食 #西门口 #泰国菜 #ThaiNarak #蕉媚泰国餐厅 #ThaiSELECT
+
+इस वीडियो के सभी फ़ूड शॉट्स AI विज़ुअलाइज़ेशन हैं। / All food shots in this video are AI visualisations.
 ```
